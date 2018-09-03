@@ -7,15 +7,15 @@
       "description": "An API for keeping track of your contacts and the companies they work for. \n\nDon't forget to take it for a spin by clicking on the **Try in Client** button next to each operation! All read operations are public and don't require authentication.  _italic_\n\n<div>\n<img src='https://thecontactsapi.apispark.net/v1/img/cropped-contact-img.png' width='90%'>\n<div>\n\n<!-- ![](https://thecontactsapi.apispark.net/v1/img/cropped-contact-img.png) -->\n\n",
       "id": "94473ce9-9d2c-4783-9458-5bf132a3a2a9",
       "importedFrom": "74e66ef2-b4f5-4c81-b219-f914ede7af99",
-      "lastModified": "2018-09-01T19:01:47.492-04:00",
+      "lastModified": "2018-09-02T13:08:56.525-04:00",
       "name": "getting_started_contacts",
-      "remoteModification": "2018-09-01T19:01:42.349-04:00"
+      "remoteModification": "2018-09-02T13:08:18.037-04:00"
     },
     {
       "type": "Service",
       "description": "",
       "id": "478e7c30-962f-49fe-aacb-56e72c13a85d",
-      "lastModified": "2018-09-01T18:21:53.005-04:00",
+      "lastModified": "2018-09-02T09:41:53.361-04:00",
       "name": "Contacts",
       "parentId": "94473ce9-9d2c-4783-9458-5bf132a3a2a9"
     },
@@ -32,14 +32,15 @@
           "name": "https",
           "version": "V11"
         },
-        "host": "5je4462.apihive.com",
-        "path": "/contacts/{contactid}"
+        "host": "thecontactsapi.restlet.net",
+        "path": "/v1/contacts/{contactid}"
       },
       "description": "Deletes a Contact",
       "id": "3cbb8f77-be1f-451d-986b-e13704b76892",
-      "lastModified": "2018-09-01T18:21:53.007-04:00",
+      "lastModified": "2018-09-02T09:41:53.363-04:00",
       "name": "Delete a Contact",
       "headers": [],
+      "assertions": [],
       "parentId": "478e7c30-962f-49fe-aacb-56e72c13a85d"
     },
     {
@@ -60,12 +61,12 @@
           "name": "https",
           "version": "V11"
         },
-        "host": "5je4462.apihive.com",
-        "path": "/contacts/"
+        "host": "thecontactsapi.restlet.net",
+        "path": "/v1/contacts/"
       },
       "description": "Adds a Contact",
       "id": "438a4011-375a-4637-b936-e80761566ec3",
-      "lastModified": "2018-09-01T18:21:53.006-04:00",
+      "lastModified": "2018-09-02T09:41:53.364-04:00",
       "name": "Create a Contact",
       "headers": [
         {
@@ -79,6 +80,7 @@
           "value": "application/json"
         }
       ],
+      "assertions": [],
       "parentId": "478e7c30-962f-49fe-aacb-56e72c13a85d"
     },
     {
@@ -94,12 +96,12 @@
           "name": "https",
           "version": "V11"
         },
-        "host": "5je4462.apihive.com",
-        "path": "/contacts/{contactid}"
+        "host": "thecontactsapi.restlet.net",
+        "path": "/v1/contacts/{contactid}"
       },
       "description": "Loads a Contact",
       "id": "6627f66d-f42d-4bbc-8c3f-da259c6450e3",
-      "lastModified": "2018-09-01T18:21:53.006-04:00",
+      "lastModified": "2018-09-02T09:41:53.365-04:00",
       "name": "Load an individual Contact",
       "headers": [
         {
@@ -108,6 +110,7 @@
           "value": "application/json"
         }
       ],
+      "assertions": [],
       "parentId": "478e7c30-962f-49fe-aacb-56e72c13a85d"
     },
     {
@@ -128,12 +131,12 @@
           "name": "https",
           "version": "V11"
         },
-        "host": "5je4462.apihive.com",
-        "path": "/contacts/{contactid}"
+        "host": "thecontactsapi.restlet.net",
+        "path": "/v1/contacts/{contactid}"
       },
       "description": "Stores a Contact",
       "id": "796893a9-2d22-4e4b-ada8-baae16b7e2f3",
-      "lastModified": "2018-09-01T18:21:53.007-04:00",
+      "lastModified": "2018-09-02T09:41:53.365-04:00",
       "name": "Update a Contact",
       "headers": [
         {
@@ -147,6 +150,7 @@
           "value": "application/json"
         }
       ],
+      "assertions": [],
       "parentId": "478e7c30-962f-49fe-aacb-56e72c13a85d"
     },
     {
@@ -163,12 +167,12 @@
           "name": "https",
           "version": "V11"
         },
-        "host": "5je4462.apihive.com",
-        "path": "/contacts/"
+        "host": "thecontactsapi.restlet.net",
+        "path": "/v1/contacts/"
       },
       "description": "Loads a list of Contact",
       "id": "aff9b946-14f8-495f-be5b-feeb81b2a954",
-      "lastModified": "2018-09-01T18:21:53.006-04:00",
+      "lastModified": "2018-09-02T09:41:53.365-04:00",
       "name": "Get the list of Contacts",
       "headers": [
         {
@@ -177,26 +181,27 @@
           "value": "application/json"
         }
       ],
+      "assertions": [],
       "parentId": "478e7c30-962f-49fe-aacb-56e72c13a85d"
     },
     {
       "type": "Service",
       "id": "4af363a5-b521-4d69-85c3-0520ddcb2d1d",
-      "lastModified": "2018-09-01T18:21:53.003-04:00",
+      "lastModified": "2018-09-02T09:41:53.367-04:00",
       "name": "About",
       "parentId": "94473ce9-9d2c-4783-9458-5bf132a3a2a9"
     },
     {
       "type": "Service",
       "id": "ac827f3c-18e8-46eb-8c6a-352138cfc2b2",
-      "lastModified": "2018-09-01T18:21:53.005-04:00",
+      "lastModified": "2018-09-02T09:41:53.367-04:00",
       "name": "General",
       "parentId": "94473ce9-9d2c-4783-9458-5bf132a3a2a9"
     },
     {
       "type": "Service",
       "id": "bbaab213-d843-44e4-aafc-5e142ef34123",
-      "lastModified": "2018-09-01T18:21:53.007-04:00",
+      "lastModified": "2018-09-02T09:41:53.367-04:00",
       "name": "Companies",
       "parentId": "94473ce9-9d2c-4783-9458-5bf132a3a2a9"
     },
@@ -213,14 +218,18 @@
           "name": "https",
           "version": "V11"
         },
-        "host": "5je4462.apihive.com",
-        "path": "/companies/{companyid}"
+        "host": "thecontactsapi.restlet.net",
+        "path": "/v1/companies/{companyid}"
       },
       "description": "Deletes a Company",
       "id": "05e39450-0b5b-482e-b142-c30086c606bd",
-      "lastModified": "2018-09-01T18:21:53.010-04:00",
+      "lastModified": "2018-09-02T09:41:53.368-04:00",
       "name": "Delete a Company",
       "headers": [],
+      "assertions": [],
+      "metaInfo": {
+        "ownerId": "a91dedc7-c828-4e01-9ded-c7c828ee0124"
+      },
       "parentId": "bbaab213-d843-44e4-aafc-5e142ef34123"
     },
     {
@@ -241,12 +250,12 @@
           "name": "https",
           "version": "V11"
         },
-        "host": "5je4462.apihive.com",
-        "path": "/companies/"
+        "host": "thecontactsapi.restlet.net",
+        "path": "/v1/companies/"
       },
       "description": "Adds a Company",
       "id": "0a914254-4285-485b-9524-9220c85df113",
-      "lastModified": "2018-09-01T18:21:53.009-04:00",
+      "lastModified": "2018-09-02T09:41:53.369-04:00",
       "name": "Create a new Company",
       "headers": [
         {
@@ -260,6 +269,10 @@
           "value": "application/json"
         }
       ],
+      "assertions": [],
+      "metaInfo": {
+        "ownerId": "a91dedc7-c828-4e01-9ded-c7c828ee0124"
+      },
       "parentId": "bbaab213-d843-44e4-aafc-5e142ef34123"
     },
     {
@@ -276,12 +289,12 @@
           "name": "https",
           "version": "V11"
         },
-        "host": "5je4462.apihive.com",
-        "path": "/companies/"
+        "host": "thecontactsapi.restlet.net",
+        "path": "/v1/companies/"
       },
       "description": "Loads a list of Company",
       "id": "68c47eb8-65ca-4f5f-b54b-8918d283fef9",
-      "lastModified": "2018-09-01T18:59:20.509-04:00",
+      "lastModified": "2018-09-02T09:41:53.369-04:00",
       "name": "Load the list of Companies",
       "headers": [
         {
@@ -290,12 +303,14 @@
           "value": "application/json"
         }
       ],
+      "assertions": [],
       "metaInfo": {
         "ownerId": "a91dedc7-c828-4e01-9ded-c7c828ee0124"
       },
       "parentId": "bbaab213-d843-44e4-aafc-5e142ef34123"
     },
     {
+      "uriEditor": true,
       "type": "Request",
       "method": {
         "link": "",
@@ -308,12 +323,12 @@
           "name": "https",
           "version": "V11"
         },
-        "host": "5je4462.apihive.com",
-        "path": "/companies/{companyid}"
+        "host": "thecontactsapi.restlet.net",
+        "path": "/v1/companies/{companyid}"
       },
       "description": "Loads a Company",
       "id": "7b399786-ac76-4724-9d83-d3f2dddb2adc",
-      "lastModified": "2018-09-01T19:01:47.301-04:00",
+      "lastModified": "2018-09-02T11:18:52.005-04:00",
       "name": "Load an individual Company",
       "headers": [
         {
@@ -339,7 +354,7 @@
           "comparison": "Equals",
           "subject": "ResponseHeader",
           "path": "Content-Type",
-          "value": "application/json; charset=UTF-8"
+          "value": "application/json"
         }
       ],
       "metaInfo": {
@@ -365,12 +380,12 @@
           "name": "https",
           "version": "V11"
         },
-        "host": "5je4462.apihive.com",
-        "path": "/companies/{companyid}"
+        "host": "thecontactsapi.restlet.net",
+        "path": "/v1/companies/{companyid}"
       },
       "description": "Stores a Company",
       "id": "db212b5a-0470-42f7-90b7-db32f1b08998",
-      "lastModified": "2018-09-01T18:21:53.010-04:00",
+      "lastModified": "2018-09-02T09:41:53.371-04:00",
       "name": "Update a Company",
       "headers": [
         {
@@ -384,7 +399,249 @@
           "value": "application/json"
         }
       ],
+      "assertions": [],
+      "metaInfo": {
+        "ownerId": "a91dedc7-c828-4e01-9ded-c7c828ee0124"
+      },
       "parentId": "bbaab213-d843-44e4-aafc-5e142ef34123"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "uri": {
+        "scheme": {
+          "secure": true,
+          "name": "https",
+          "version": "V11"
+        }
+      },
+      "id": "af97d97a-af22-4d2c-8ef3-8d8051f0c6f4",
+      "lastModified": "2018-09-02T12:38:01.527-04:00",
+      "name": "myrequest",
+      "metaInfo": {
+        "ownerId": "a91dedc7-c828-4e01-9ded-c7c828ee0124"
+      },
+      "parentId": "bbaab213-d843-44e4-aafc-5e142ef34123"
+    },
+    {
+      "type": "Scenario",
+      "description": "",
+      "id": "579e7348-6222-4413-adb8-518e4bec35d2",
+      "lastModified": "2018-09-02T12:42:26.978-04:00",
+      "name": "Scenario 7",
+      "requestOrder": [
+        "Copy of Create a new Company",
+        "GET https://thecontactsapi.restlet.net/v1/companies/",
+        "GET https://thecontactsapi.restlet.net/v1/companies/Johnsons IT Solutions",
+        "GET https://thecontactsapi.restlet.net/v1/companies/0e8c9fb0-ad98-11e6-bf2e-47644ada7c0f"
+      ],
+      "parentId": "bbaab213-d843-44e4-aafc-5e142ef34123"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "",
+        "name": "POST"
+      },
+      "body": {
+        "bodyType": "Text",
+        "textBody": "{\n  \"name\": \"George Street Brewery\",\n  \"address\":{\n    \"street\": \"2 place de la Defense\",\n    \"zipcode\": \"92053\",\n    \"city\": \"Paris\"\n  },\n  \"tags\":[\n    \"brewery\",\n    \"beer\",\n    \"ale\"\n  ]\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "secure": true,
+          "name": "https",
+          "version": "V11"
+        },
+        "host": "thecontactsapi.restlet.net",
+        "path": "/v1/companies/"
+      },
+      "description": "Adds a Company",
+      "id": "9ac15571-62cd-44e4-a1d5-55a1496686af",
+      "lastModified": "2018-09-02T13:08:56.326-04:00",
+      "name": "Copy of Create a new Company",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "enabled": true,
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "assertions": [
+        {
+          "comparison": "Equals",
+          "subject": "ResponseStatus",
+          "path": "code",
+          "value": "200"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "a91dedc7-c828-4e01-9ded-c7c828ee0124"
+      },
+      "parentId": "579e7348-6222-4413-adb8-518e4bec35d2"
+    },
+    {
+      "uriEditor": true,
+      "type": "Request",
+      "method": {
+        "link": "",
+        "name": "GET"
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "secure": true,
+          "name": "https",
+          "version": "V11"
+        },
+        "host": "thecontactsapi.restlet.net",
+        "path": "/v1/companies/"
+      },
+      "description": "Loads a list of Company",
+      "id": "a80051de-2ed0-4312-b1ac-c14412c8354e",
+      "lastModified": "2018-09-02T12:39:26.275-04:00",
+      "name": "GET https://thecontactsapi.restlet.net/v1/companies/",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "assertions": [],
+      "metaInfo": {
+        "ownerId": "a91dedc7-c828-4e01-9ded-c7c828ee0124"
+      },
+      "parentId": "579e7348-6222-4413-adb8-518e4bec35d2"
+    },
+    {
+      "uriEditor": true,
+      "type": "Request",
+      "method": {
+        "link": "",
+        "name": "GET"
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "secure": true,
+          "name": "https",
+          "version": "V11"
+        },
+        "host": "thecontactsapi.restlet.net",
+        "path": "/v1/companies/Johnsons IT Solutions"
+      },
+      "description": "Loads a Company",
+      "id": "dcf558cd-8aa2-4186-bbfd-cd28728997a9",
+      "lastModified": "2018-09-02T12:39:26.275-04:00",
+      "name": "GET https://thecontactsapi.restlet.net/v1/companies/Johnsons IT Solutions",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "assertions": [
+        {
+          "comparison": "Matches",
+          "subject": "ResponseStatus",
+          "path": "code",
+          "value": "/^2[0-9]{2}$/g"
+        },
+        {
+          "comparison": "Exists",
+          "subject": "ResponseBody",
+          "path": "content",
+          "value": ""
+        },
+        {
+          "comparison": "Equals",
+          "subject": "ResponseHeader",
+          "path": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "a91dedc7-c828-4e01-9ded-c7c828ee0124"
+      },
+      "parentId": "579e7348-6222-4413-adb8-518e4bec35d2"
+    },
+    {
+      "uriEditor": true,
+      "type": "Request",
+      "method": {
+        "link": "",
+        "name": "GET"
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "secure": true,
+          "name": "https",
+          "version": "V11"
+        },
+        "host": "thecontactsapi.restlet.net",
+        "path": "/v1/companies/0e8c9fb0-ad98-11e6-bf2e-47644ada7c0f"
+      },
+      "description": "Loads a Company",
+      "id": "cbe9d995-25c6-46b8-88f4-6617a95de3fe",
+      "lastModified": "2018-09-02T12:39:26.276-04:00",
+      "name": "GET https://thecontactsapi.restlet.net/v1/companies/0e8c9fb0-ad98-11e6-bf2e-47644ada7c0f",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "assertions": [
+        {
+          "comparison": "Matches",
+          "subject": "ResponseStatus",
+          "path": "code",
+          "value": "/^2[0-9]{2}$/g"
+        },
+        {
+          "comparison": "Exists",
+          "subject": "ResponseBody",
+          "path": "content",
+          "value": ""
+        },
+        {
+          "comparison": "Equals",
+          "subject": "ResponseHeader",
+          "path": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "a91dedc7-c828-4e01-9ded-c7c828ee0124"
+      },
+      "parentId": "579e7348-6222-4413-adb8-518e4bec35d2"
+    },
+    {
+      "type": "Context",
+      "id": "e6c4bf6f-3060-437f-9b08-c971649b1478",
+      "lastModified": "2018-09-02T11:19:13.867-04:00",
+      "name": "default",
+      "variables": [
+        {
+          "enabled": true,
+          "name": "companyid",
+          "value": "0e8c9fb0-ad98-11e6-bf2e-47644ada7c0f"
+        }
+      ]
     }
   ]
 }
