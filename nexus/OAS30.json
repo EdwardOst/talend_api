@@ -12,6 +12,9 @@
   "servers" : [ {
     "url" : "https://32kr099.us.api-mocks.com",
     "description" : "This is your API mock endpoint. When called, it will simulate the behavior of your API."
+  }, {
+    "url" : "https://ao62yys2nb.execute-api.us-east-1.amazonaws.com/dev/repository/asset",
+    "description" : "AWS API Gateway"
   } ],
   "paths" : {
     "/repository" : {
