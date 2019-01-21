@@ -1,0 +1,337 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "Nexus",
+    "description" : "Sonatype Nexus webhook API contract.",
+    "contact" : {
+      "name" : "Edward Ost",
+      "email" : "eost@talend.com"
+    },
+    "version" : "1.0.0"
+  },
+  "servers" : [ {
+    "url" : "https://32kr099.us.api-mocks.com",
+    "description" : "This is your API mock endpoint. When called, it will simulate the behavior of your API."
+  } ],
+  "paths" : {
+    "/repository" : {
+      "summary" : "Nexus webhook callbacks for repository elements",
+      "description" : "Resources for nexus repository",
+      "post" : {
+        "summary" : "Nexus Repository webhook",
+        "description" : "Callback triggered by Nexus when a Repository is created, modified, or deleted ",
+        "operationId" : "nexus.webhook.repository",
+        "parameters" : [ {
+          "name" : "X-Webhook-Signature",
+          "in" : "header",
+          "description" : "This is the HMAC digest of the body of the payload, if an optional secret key has been configured",
+          "schema" : {
+            "type" : "string",
+            "description" : "This is the HMAC digest of the body of the payload, if an optional secret key has been configured"
+          }
+        }, {
+          "name" : "X-Nexus-Webhook-Delivery",
+          "in" : "header",
+          "description" : "This is a unique UUID identifying the event",
+          "schema" : {
+            "type" : "string",
+            "description" : "This is a unique UUID identifying the event"
+          }
+        }, {
+          "name" : "X-Nexus-Webhook-Id",
+          "in" : "header",
+          "description" : "This is the event type, e.g. rm:repository:asset",
+          "schema" : {
+            "type" : "string",
+            "description" : "This is the event type, e.g. rm:repository:asset"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/RepositoryNotification"
+              },
+              "example" : "{\n  \"nodeId\":\"7FFA7361-6ED33978-36997BD4-47095CC4-331356BE\",\n  \"initiator\":\"admin/127.0.0.1\",\n  \"audit\":{\n     \"domain\":\"security.user\",\n     \"type\":\"created\",\n     \"context\":\"testuser\",\n     \"attributes\":{\n        \"id\":\"testuser\",\n        \"name\":\"test user\",\n        \"email\":\"test@test.com\",\n        \"source\":\"default\",\n        \"status\":\"active\",\n        \"roles\":\"nx-admin, nx-anonymous\"\n      }\n   }\n}"
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Status 200"
+          }
+        }
+      }
+    },
+    "/repository/asset" : {
+      "post" : {
+        "tags" : [ "nexus" ],
+        "summary" : "Nexus repository Asset webhook",
+        "description" : "Callback triggered by Nexus when an Asset is modified",
+        "operationId" : "nexus.webhook.repository.asset",
+        "parameters" : [ {
+          "name" : "X-Webhook-Signature",
+          "in" : "header",
+          "description" : "This is the HMAC digest of the body of the payload, if an optional secret key has been configured",
+          "schema" : {
+            "type" : "string",
+            "description" : "This is the HMAC digest of the body of the payload, if an optional secret key has been configured"
+          }
+        }, {
+          "name" : "X-Nexus-Webhook-Delivery",
+          "in" : "header",
+          "description" : "This is a unique UUID identifying the event",
+          "schema" : {
+            "type" : "string",
+            "description" : "This is a unique UUID identifying the event"
+          }
+        }, {
+          "name" : "X-Nexus-Webhook-Id",
+          "in" : "header",
+          "description" : "This is the event type, e.g. rm:repository:asset",
+          "schema" : {
+            "type" : "string",
+            "description" : "This is the event type, e.g. rm:repository:asset"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/RepositoryAssetNotification"
+              },
+              "example" : "{\n\t\"timestamp\": \"2019-01-20T17:51:11.757+0000\",\n\t\"nodeId\": \"E8F42A11-568FCDA1-473F2432-7B5509CE-267F1A2E\",\n\t\"initiator\": \"admin/127.0.0.1\",\n\t\"repositoryName\": \"snapshots\",\n\t\"action\": \"UPDATED\",\n\t\"asset\": {\n\t\t\"id\": \"d064804a8ed5ad6e52eb15ed76a1da3b\",\n\t\t\"format\": \"maven2\",\n\t\t\"name\": \"com/talend/se/lambda/Job2Lambda/0.1.0-SNAPSHOT/maven-metadata.xml\"\n\t}\n}"
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Status 200"
+          }
+        }
+      }
+    },
+    "/repository/component" : {
+      "summary" : "Repository Component Webhook",
+      "post" : {
+        "tags" : [ "nexus" ],
+        "summary" : "Nexus repository Component webhook",
+        "description" : "Callback triggered by Nexus when a Component is modified",
+        "operationId" : "nexus.webhook.repository.component",
+        "parameters" : [ {
+          "name" : "X-Webhook-Signature",
+          "in" : "header",
+          "description" : "This is the HMAC digest of the body of the payload, if an optional secret key has been configured",
+          "schema" : {
+            "type" : "string",
+            "description" : "This is the HMAC digest of the body of the payload, if an optional secret key has been configured"
+          }
+        }, {
+          "name" : "X-Nexus-Webhook-Delivery",
+          "in" : "header",
+          "description" : "This is a unique UUID identifying the event",
+          "schema" : {
+            "type" : "string",
+            "description" : "This is a unique UUID identifying the event"
+          }
+        }, {
+          "name" : "X-Nexus-Webhook-Id",
+          "in" : "header",
+          "description" : "This is the event type, e.g. rm:repository:asset",
+          "schema" : {
+            "type" : "string",
+            "description" : "This is the event type, e.g. rm:repository:asset"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/RepositoryComponentNotification"
+              },
+              "example" : "{\n   \"timestamp\":\"2016-11-14T19:32:13.515+0000\",\n   \"nodeId\":\"7FFA7361-6ED33978-36997BD4-47095CC4-331356BE\",\n   \"initiator\":\"anonymous/127.0.0.1\",\n   \"repositoryName\":\"npm-proxy\",\n   \"action\":\"CREATED\",\n   \"component\":{\n      \"id\":\"08909bf0c86cf6c9600aade89e1c5e25\",\n      \"format\":\"npm\",\n      \"name\":\"angular2\",\n      \"group\":\"types\",\n      \"version\":\"0.0.2\"\n   }\n}"
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Status 200"
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "RepositoryNotification" : {
+        "type" : "object",
+        "required" : [ "action", "initiator", "nodeId", "timestamp" ],
+        "description" : "Payload returned when repository is created inside of Nexus Repository ",
+        "properties" : {
+          "timestamp" : {
+            "type" : "string",
+            "format" : "date-time",
+            "description" : "The ISO 8601 representation of the time the event occurred"
+          },
+          "nodeId" : {
+            "type" : "string",
+            "description" : "A UUID that identifies which Nexus Repository Manager node the event originated from",
+            "example" : "7FFA7361-6ED33978-36997BD4-47095CC4-331356BE"
+          },
+          "initiator" : {
+            "type" : "string",
+            "description" : "The userId or \"anonymous\" for system events",
+            "example" : "anonymous/127.0.0.1"
+          },
+          "action" : {
+            "type" : "string",
+            "description" : "A string that identifies the action performed on the repository",
+            "enum" : [ "CREATED" ],
+            "example" : "CREATED"
+          },
+          "repository" : {
+            "type" : "object",
+            "required" : [ "format", "name", "type" ],
+            "properties" : {
+              "format" : {
+                "type" : "string",
+                "description" : "A string that identifies the repository format type",
+                "example" : "pypi"
+              },
+              "name" : {
+                "type" : "string",
+                "description" : "A string that identifies the repository name",
+                "example" : "pypi-proxy"
+              },
+              "type" : {
+                "type" : "string",
+                "description" : "A string that identifies the type of repository",
+                "example" : "proxy"
+              }
+            }
+          }
+        },
+        "example" : "{\r\n   \"timestamp\":\"2016-11-14T20:19:34.525+0000\",\r\n   \"nodeId\":\"7FFA7361-6ED33978-36997BD4-47095CC4-331356BE\",\r\n   \"initiator\":\"admin/127.0.0.1\",\r\n   \"action\":\"CREATED\",\r\n   \"repository\":{\r\n      \"format\":\"pypi\",\r\n      \"name\":\"pypi-proxy\",\r\n      \"type\":\"proxy\"\r\n   }\r\n}"
+      },
+      "RepositoryComponentNotification" : {
+        "type" : "object",
+        "required" : [ "action", "initiator", "nodeId", "repositoryName", "timestamp" ],
+        "description" : " Payload returned when a component is created inside of Nexus Repository Manager.",
+        "properties" : {
+          "timestamp" : {
+            "type" : "string",
+            "format" : "date-time",
+            "description" : "The ISO 8601 representation of the time the event occurred"
+          },
+          "nodeId" : {
+            "type" : "string",
+            "description" : "A UUID that identifies which Nexus Repository Manager node the event originated from",
+            "example" : "7FFA7361-6ED33978-36997BD4-47095CC4-331356BE"
+          },
+          "initiator" : {
+            "type" : "string",
+            "description" : "The userId or \"anonymous\" for system events",
+            "example" : "anonymous/127.0.0.1"
+          },
+          "repositoryName" : {
+            "type" : "string",
+            "description" : "A string that identifies the repository where the event occurred",
+            "example" : "npm-proxy"
+          },
+          "action" : {
+            "type" : "string",
+            "description" : "A string that identifies the action performed on the component",
+            "enum" : [ "CREATED", "UPDATED" ],
+            "example" : "CREATED"
+          },
+          "component" : {
+            "type" : "object",
+            "required" : [ "format", "group", "id", "name", "version" ],
+            "properties" : {
+              "id" : {
+                "type" : "string",
+                "description" : "A UUID that identifies the assets ID",
+                "example" : "08909bf0c86cf6c9600aade89e1c5e25"
+              },
+              "format" : {
+                "type" : "string",
+                "description" : "A string that identifies the repository format type",
+                "enum" : [ "npm", "zip" ],
+                "example" : "npm"
+              },
+              "name" : {
+                "type" : "string",
+                "description" : "A string that identifies the component name",
+                "example" : "angular2"
+              },
+              "group" : {
+                "type" : "string",
+                "description" : "A string that identifies the component group",
+                "example" : "types"
+              },
+              "version" : {
+                "type" : "string",
+                "description" : "A string that identifies the component version",
+                "example" : "0.0.2"
+              }
+            }
+          }
+        },
+        "example" : "{\r\n   \"timestamp\":\"2016-11-14T19:32:13.515+0000\",\r\n   \"nodeId\":\"7FFA7361-6ED33978-36997BD4-47095CC4-331356BE\",\r\n   \"initiator\":\"anonymous/127.0.0.1\",\r\n   \"repositoryName\":\"npm-proxy\",\r\n   \"action\":\"CREATED\",\r\n   \"component\":{\r\n      \"id\":\"08909bf0c86cf6c9600aade89e1c5e25\",\r\n      \"format\":\"npm\",\r\n      \"name\":\"angular2\",\r\n      \"group\":\"types\",\r\n      \"version\":\"0.0.2\"\r\n   }\r\n}"
+      },
+      "RepositoryAssetNotification" : {
+        "type" : "object",
+        "required" : [ "initiator", "nodeId", "repositoryName", "timestamp" ],
+        "description" : "Payload returned when an asset is created inside of Nexus Repository Manager.",
+        "properties" : {
+          "timestamp" : {
+            "type" : "string",
+            "format" : "date-time",
+            "description" : "The ISO 8601 representation of the time the event occurred"
+          },
+          "nodeId" : {
+            "type" : "string",
+            "description" : "A UUID that identifies which Nexus Repository Manager node the event originated from",
+            "example" : "E8F42A11-568FCDA1-473F2432-7B5509CE-267F1A2E"
+          },
+          "initiator" : {
+            "type" : "string",
+            "description" : "The userId or \"anonymous\" for system events",
+            "example" : "admin/127.0.0.1"
+          },
+          "repositoryName" : {
+            "type" : "string",
+            "description" : "A string that identifies the repository where the event occurred"
+          },
+          "action" : {
+            "type" : "string",
+            "description" : "A string that identifies the action performed on the asset",
+            "example" : "UPDATED"
+          },
+          "asset" : {
+            "type" : "object",
+            "required" : [ "format", "id", "name" ],
+            "properties" : {
+              "id" : {
+                "type" : "string",
+                "description" : "A UUID that identifies the assets ID",
+                "example" : "d064804a8ed5ad6e52eb15ed76a1da3b"
+              },
+              "format" : {
+                "type" : "string",
+                "description" : "A string that identifies the repository format type",
+                "example" : "maven2"
+              },
+              "name" : {
+                "type" : "string",
+                "description" : "A string that identifies the asset name",
+                "example" : "com/talend/se/lambda/Job2Lambda/0.1.0-SNAPSHOT/maven-metadata.xml"
+              }
+            }
+          }
+        },
+        "example" : "{\n\t\"timestamp\": \"2019-01-20T17:51:11.757+0000\",\n\t\"nodeId\": \"E8F42A11-568FCDA1-473F2432-7B5509CE-267F1A2E\",\n\t\"initiator\": \"admin/127.0.0.1\",\n\t\"repositoryName\": \"snapshots\",\n\t\"action\": \"UPDATED\",\n\t\"asset\": {\n\t\t\"id\": \"d064804a8ed5ad6e52eb15ed76a1da3b\",\n\t\t\"format\": \"maven2\",\n\t\t\"name\": \"com/talend/se/lambda/Job2Lambda/0.1.0-SNAPSHOT/maven-metadata.xml\"\n\t}\n}"
+      }
+    }
+  }
+}
